@@ -1,26 +1,33 @@
-import React,{Component} from 'react'
+import React, { Component } from "react";
 
-export default class HelloWorld2 extends Component{
-  temp: string
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     firstName: "John",
-  //     lastName: "Smith",
-  //     salary: 100000
-  //   };
-  //   this.temp= "Employee Info:"
-  // }
+export default class HelloWorld2 extends Component {
+  temp: string;
+  constructor(props){
+    super(props);
+    this.state = {
+      firstName: "John",
+      lastName: "Smith",
+      salary: 100000
+    };
+    this.temp= "test 1"
+    this.increaseSalary =  this.increaseSalary.bind(this);
+  }
+
+  increaseSalary(){
+    this.setState({     
+      salary: this.state.salary + 1000
+    })
+  };
 
   render() {
-  return(
-    <div>
-     <p>{this.temp}</p>
-     <div> FirstName: {this.props.firstName}</div>
-     <div> LastName : {this.props.lastName}</div>
-     <div> Salary : {this.props.salary}</div>
-    </div>
-  )
+    return (
+      <div>
+        <p>Employee Information:</p>
+        <div> FirstName: {this.state.firstName}</div>
+        <div> LastName : {this.state.lastName}</div>
+        <div> Salary : {this.state.salary}</div>
+         <button onClick = {this.increaseSalary}>Increase Salary</button>
+      </div>
+    );
+  }
 }
-}
-
