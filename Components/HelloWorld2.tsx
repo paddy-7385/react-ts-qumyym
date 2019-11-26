@@ -14,9 +14,13 @@ export default class HelloWorld2 extends Component {
   }
 
   increaseSalary(){
-    this.setState({     
-      salary: this.state.salary + 1000
-    })
+    this.setState((state) =>({     
+      salary: state.salary + 1000
+    }));
+
+     this.setState((state) =>({     
+      salary: state.salary + 1000
+    }));
   };
 
   render() {
