@@ -1,7 +1,7 @@
 import React from "react";
 
-import HelloWorld from "./Components/HelloWorld";
 import HelloWorld2 from "./Components/HelloWorld2";
+import PureComponentExample from "./Components/PureComponentExample";
 
 export default function App() {
 
@@ -13,13 +13,9 @@ export default function App() {
   
   return (
     <div>
-     
-      <HelloWorld
-        name="John"
-        myButtonClickHandler={LogMessage}
-      />
-      
-      <HelloWorld2 firstName="John" lastName="Smith" salary="5000" />
+        
+      <HelloWorld2 />
+      <PureComponentExample/>
     </div>
   );
 
